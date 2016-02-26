@@ -1,4 +1,4 @@
-# AndroidStudey
+# AndroidStudy
 Android学习
 #Fragment(片段)#
 ##一.Fragment简介##
