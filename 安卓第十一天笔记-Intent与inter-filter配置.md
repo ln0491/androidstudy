@@ -1,4 +1,4 @@
-# AndroidStudey
+# AndroidStudy
 Android学习
 #Intent与inter-filter配置#
 ## 1.Intent对象简述 ##
