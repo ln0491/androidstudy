@@ -1882,49 +1882,49 @@ showNext(),show()Previous()控制显示下一个与上一个
 
 9.2 实现
 
-/**
- * StackView
- * 步骤
- * 1.获取stackview
- * 2.建立适配器与资源
- * 3.设置适配器
- */
-public class MainActivity extends AppCompatActivity {
-    private StackView stackView;
-    private int[] imageIds = new int[]
-            {
-                    R.drawable.bomb5, R.drawable.bomb6, R.drawable.bomb7
-                    , R.drawable.bomb8, R.drawable.bomb9, R.drawable.bomb10
-                    , R.drawable.bomb11, R.drawable.bomb12, R.drawable.bomb13
-                    , R.drawable.bomb14, R.drawable.bomb15, R.drawable.bomb16
-            };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-        stackView = (StackView) findViewById(R.id.stackView);
-
-        /*
-        数据集合
-         */
-        List<Map<String, Object>> listItem = new ArrayList<Map<String, Object>>();
-
-        for (int i = 0; i < imageIds.length; i++) {
-            Map<String, Object> map = new HashMap<String, Object>();
-
-            map.put("image", imageIds[i]);
-            listItem.add(map);
-        }
-
-        SimpleAdapter simpleAdapter =
-                new SimpleAdapter(this, listItem, R.layout.images, new String[]{"image"}, new int[]{R.id.iv_display});
-        //设置适配器
-
-        stackView.setAdapter(simpleAdapter);
-    }
+		/**
+		 * StackView
+		 * 步骤
+		 * 1.获取stackview
+		 * 2.建立适配器与资源
+		 * 3.设置适配器
+		 */
+		public class MainActivity extends AppCompatActivity {
+		    private StackView stackView;
+		    private int[] imageIds = new int[]
+		            {
+		                    R.drawable.bomb5, R.drawable.bomb6, R.drawable.bomb7
+		                    , R.drawable.bomb8, R.drawable.bomb9, R.drawable.bomb10
+		                    , R.drawable.bomb11, R.drawable.bomb12, R.drawable.bomb13
+		                    , R.drawable.bomb14, R.drawable.bomb15, R.drawable.bomb16
+		            };
+		
+		    @Override
+		    protected void onCreate(Bundle savedInstanceState) {
+		        super.onCreate(savedInstanceState);
+		        setContentView(R.layout.activity_main);
+		
+		
+		        stackView = (StackView) findViewById(R.id.stackView);
+		
+		        /*
+		        数据集合
+		         */
+		        List<Map<String, Object>> listItem = new ArrayList<Map<String, Object>>();
+		
+		        for (int i = 0; i < imageIds.length; i++) {
+		            Map<String, Object> map = new HashMap<String, Object>();
+		
+		            map.put("image", imageIds[i]);
+		            listItem.add(map);
+		        }
+		
+		        SimpleAdapter simpleAdapter =
+		                new SimpleAdapter(this, listItem, R.layout.images, new String[]{"image"}, new int[]{R.id.iv_display});
+		        //设置适配器
+		
+		        stackView.setAdapter(simpleAdapter);
+		    }
 
 		    /**
 		     * 上一个
@@ -1941,7 +1941,7 @@ public class MainActivity extends AppCompatActivity {
 		        stackView.showNext();
 		    }
 
-}
+		}
 
 
 
