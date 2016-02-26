@@ -105,7 +105,7 @@ android.R.layout.simple_list_item_1
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:minHeight="?android:attr/listPreferredItemHeightSmall" />
 
-4.使用SimpleAdapter
+##4.使用SimpleAdapter
 public SimpleAdapter(Context context, List<? extends Map<String, ?>> data,
         @LayoutRes int resource, String[] from, @IdRes int[] to)
 
@@ -262,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-5.使用BaseAdapter
+##5.使用BaseAdapter
 
 BaseAdapter要实现 以下方法:
 
@@ -1539,7 +1539,7 @@ public class MainActivity extends Activity implements OnClickListener {
  
  
  
-6.GridView与ExpandableListView
+##6.GridView与ExpandableListView
 
 GridView:和ListView有共同的父类,都是AbsListView,与ListView很相似
 区别:ListView只显示一列
@@ -1547,7 +1547,7 @@ GridView可以显示多列
 numcolumns:属性可以设置显示列数
 其它用法与ListView一样
 
-7.Spinner
+##7.Spinner
 Spinner其实就是一个列表选择框,弹出一个菜单提供用户选择,
 也需要设置Adapter
 
@@ -1631,7 +1631,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-8.AdapterViewFlipper的功能与用法
+##8.AdapterViewFlipper的功能与用法
  
 AdapterViewFlipper继承了AdapterViewAnimator,它也会显示Adapter提供的多个级件,但它每次只能显示一个View组件,程序可以通过showPrevious()和showNext()方法控制显示上一个,下一个,
 使用startFlipper()控件自动播放
@@ -1822,7 +1822,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-9.StackView功能与用法
+##9.StackView功能与用法
  
 StackView也是AdapterViewAnimator的子类
 它也是用于显示Adapter提供的一系列View的.StackView将会心堆叠Stack的方式来显示多个列表项
@@ -1926,20 +1926,20 @@ public class MainActivity extends AppCompatActivity {
         stackView.setAdapter(simpleAdapter);
     }
 
-    /**
-     * 上一个
-     */
-    public void prev(View v){
-
-        stackView.showPrevious();
-    }
-
-    /**
-     * 下一个
-     */
-    public void next(View v){
-        stackView.showNext();
-    }
+		    /**
+		     * 上一个
+		     */
+		    public void prev(View v){
+		
+		        stackView.showPrevious();
+		    }
+		
+		    /**
+		     * 下一个
+		     */
+		    public void next(View v){
+		        stackView.showNext();
+		    }
 
 }
 
