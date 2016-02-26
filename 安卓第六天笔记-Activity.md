@@ -1,4 +1,4 @@
-# AndroidStudey
+# AndroidStudy
 Android学习
 ###Activity （组件）
 
